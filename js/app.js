@@ -191,24 +191,24 @@ function igual() {
   switch (operacion) {
     case "mas":
       resultado = Number(num1)+Number(num2);
-      document.getElementById('display').innerHTML= resultado.toFixed(2);
+      document.getElementById('display').innerHTML= resultado.toPrecision(7)
       break;
     case "menos":
       resultado = Number(num1)-Number(num2);
-      document.getElementById('display').innerHTML= resultado.toFixed(2);
+      document.getElementById('display').innerHTML= resultado.toPrecision(7);
       break;
     case "por":
       resultado = Number(num1)*Number(num2);
-      document.getElementById('display').innerHTML= resultado.toFixed(2);
+      document.getElementById('display').innerHTML= resultado.toPrecision(7);
       break;
     case "dividido":
       resultado = Number(num1)/Number(num2);
-      document.getElementById('display').innerHTML= resultado.toFixed(2);
+      document.getElementById('display').innerHTML= resultado.toPrecision(7);
       break;
   }
 }
 
-    //tecla On/case
+    //tecla On/C
 function on() {
   document.getElementById("display").innerHTML = 0;
   operacion="";
@@ -231,17 +231,3 @@ function punto() {
     cantNumDisplay = actual.length +1;
   }
 }
-
-    /*ayudas del tutor
-validar cant de num en el display:
-var display = document.getElementById("display")
-if(display.innerHTML.length<8){
-//es menor asi que puede escribir el siguiente digito
-}
-verificar si hay punto
-if(display.textContent.indexOf(".")==-1){
-//no se encuentra el punto, lo pude escribir
-}
-efecto boton
-https://www.w3schools.com/code/tryit.asp?filename=G3RWURIWO5EX
-*/
